@@ -1,0 +1,12 @@
+<%
+=begin%>
+ <h1>Welcome to Meta Ads App</h1>
+<% if current_user %>
+  <p>Signed in as <%= current_user.name %></p>
+  <%= link_to 'Dashboard', dashboard_path %>
+  <%= link_to 'Logout', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Login with Facebook', '/auth/facebook' %>
+<% end %>
+<%
+=end%>
