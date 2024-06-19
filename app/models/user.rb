@@ -15,6 +15,15 @@ class User < ApplicationRecord
       user.facebook_access_token_expiry = Time.at(auth.credentials.expires_at)
     end
   end
+
+  def update_facebook_ads_account(account_id, account_name, access_token)
+    update(
+      ads_account_id: account_id,
+      ads_account_name: account_name,
+      ads_access_token: access_token
+    )
+  end
+  
   # def self.koala(auth)
   #   access_token = auth['token']
   #   facebook = Koala::Facebook::API.new(access_token)

@@ -305,7 +305,7 @@ Devise.setup do |config|
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'ads_read,ads_management'
-  config.omniauth_path_prefix = "/users/auth"
+  config.omniauth_path_prefix = '/users/auth'
 
 
   # ==> Configuration for :registerable
