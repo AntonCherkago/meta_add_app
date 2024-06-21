@@ -306,7 +306,6 @@ Devise.setup do |config|
   config.responder.redirect_status = :see_other
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'ads_read,ads_management',
                                                                                  callback_url: 'https://meta-adds-app-a985722603b4.herokuapp.com/users/auth/facebook/callback'
-  config.omniauth_path_prefix = '/users/auth'
 
   # ==> Configuration for :registerable
 
